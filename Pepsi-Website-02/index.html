@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#"><img src="./Images/logo.png" class="logo" /> </a>
+        <ul>
+          <li>Home</li>
+          <li>Products</li>
+          <li>What's New</li>
+          <li>Newsletter</li>
+          <li>Contact</li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>That's What <br /><span>I like</span></h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            voluptatibus dolorum ut! Labore accusamus sed commodi iste dolorem
+            laboriosam exercitationem.
+          </p>
+          <a href="#">View All Products</a>
+        </div>
+        <div class="imgBox">
+          <img src="./Images/pepsi001.png" class="pepsi" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="./Images/pepsi001.png"
+            onclick="imgSlider('./Images/pepsi001.png');
+            bgChanger('#0062b2')
+            "
+          />
+        </li>
+        <li>
+          <img
+            src="./Images/pepsi002.png"
+            onclick="imgSlider('./Images/pepsi002.png')
+             bgChanger('#e60c2c')
+            "
+          />
+        </li>
+        <li>
+          <img
+            src="./Images/pepsi003.png"
+            onclick="imgSlider('./Images/pepsi003.png')
+             bgChanger('#1e1e1e')
+            "
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="./Images/facebook.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./Images/instagram.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./Images/twitter.png" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".pepsi").src = anything;
+      }
+      function bgChanger(color) {
+        const bg = document.querySelector(".sec");
+        bg.style.background = color;
+      }
+    </script>
+  </body>
+</html>
