@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px;
+  background: whitesmoke;
+  transition: 0.5s;
+}
+.banner.night {
+  background: #333;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 150px;
+  height: 150px;
+  background: url(./images/dotted.png);
+  background-size: cover;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: #333;
+  font-size: 2em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.5;
+}
+header .logo span {
+  color: #2196f3;
+}
+header ul {
+  display: flex;
+  gap: 40px;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #333;
+  transition: 0.5s;
+}
+.content {
+  position: relative;
+  max-width: 700px;
+  z-index: 10;
+}
+.content h3 {
+  font-size: 2em;
+  color: #333;
+  font-weight: 200;
+  transition: 0.5s;
+}
+.content h2 {
+  font-size: 5.5em;
+  color: #333;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.content h2 span {
+  color: #e91e63;
+}
+.content p {
+  font-size: 1.2em;
+  color: #666;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.content button {
+  position: relative;
+  background: #2196f3;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 15px 35px;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  margin-right: 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.content button.chat {
+  background: transparent;
+  color: #333;
+}
+.content button.chat span {
+  margin-right: 0.5em;
+  color: #e91e63;
+}
+.sci {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a img {
+  text-decoration: none;
+  height: 24px;
+  color: #333;
+}
+.sci li a:hover {
+  color: #2196f3;
+}
+.dayNight {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.dayNight img {
+  height: 20px;
+}
+.banner.night .dayNight {
+  background: #444;
+  color: #fff;
+}
+.dayNight img:nth-child(2),
+.banner.night .dayNight img:nth-child(1) {
+  display: none;
+}
+.banner.night .dayNight img:nth-child(2) {
+  display: block;
+}
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content h3,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night header ul li a {
+  color: #fff;
+}
+.banner.night .sci li a img {
+  background: white;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.banner.night .sci li a:hover {
+  color: #2196f3;
+}
+.colors {
+  position: absolute;
+  right: 0;
+  max-width: 800px;
+  animation: animateColor 8s ease-in-out infinite;
+}
+@keyframes animateColor {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+}
+.men {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  max-height: 85vh;
+  animation: animateMen 8s ease-in-out infinite;
+}
+
+@keyframes animateMen {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+}
